@@ -17,7 +17,7 @@
 
 		<!-- Wrapper -->
 			<div id="wrapper">
-
+				<form method="post" action="save_survey">
 				<!-- Intro -->
 					<section class="intro">
 						<header>
@@ -32,7 +32,6 @@
 							<span class="image fill" data-position="center"><img src="static/images/pic01.jpg" alt="" /></span>
 						</div>
 					</section>
-
 				<!-- Section - gender -->
 					<section>
 						<header>
@@ -40,44 +39,45 @@
 						</header>
 						<div class="content">
 							<div class="field half">
-								<input type="radio" id="male" name="gender">
+								<input type="radio" id="male" name="gender" value="{{addq.ans1}}">
 								<label for="male">남성</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="female" name="gender">
+								<input type="radio" id="female" name="gender" value="{{addq.ans1}}">
 								<label for="female">여성</label>
 							</div>
 						</div>
 					</section>
+
 
 				<!-- Section - age -->
 					<section>
 						<header>
 							<h2>당신의 연령을 알려주세요.</h2>
 						</header>
-						<div class="content">
+						<div class="content">{{survey.question}}
 							<div class="field half">
-								<input type="radio" id="teenage" name="age">
+								<input type="radio" id="teenage" name="age" value="{{addq.ans2}}">
 								<label for="teenage">10대</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="twnetyage" name="age">
+								<input type="radio" id="twnetyage" name="age" value="{{addq.ans2}}">
 								<label for="twnetyage">20대</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="thirtyage" name="age">
+								<input type="radio" id="thirtyage" name="age" value="{{addq.ans2}}">
 								<label for="thirtyage">30대</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="fourtage" name="age">
+								<input type="radio" id="fourtage" name="age" value="{{addq.ans2}}">
 								<label for="fourtage">40대</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="fiftyage" name="age">
+								<input type="radio" id="fiftyage" name="age" value="{{addq.ans2}}">
 								<label for="fiftyage">50대</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="sixtyage" name="age">
+								<input type="radio" id="sixtyage" name="age" value="{{addq.ans2}}">
 								<label for="sixtyage">60대 이상</label>
 							</div>
 						</div>
@@ -88,21 +88,21 @@
 						<header>
 							<h2>해당하시면 체크해주세요.</h2>
 						</header>
-						<div class="content">
+						<div class="content">{{survey.question}}
 							<div class="field half">
-								<input type="checkbox" id="youngman" name="youngman">
+								<input type="checkbox" id="youngman" name="youngman" value="{{addq.ans3}}">
 								<label for="youngman">청년(20세 이상 만 32세 이하)</label>
 							</div>
 							<div class="field half">
-								<input type="checkbox" id="married" name="married">
+								<input type="checkbox" id="married" name="married" value="{{addq.ans3}}">
 								<label for="married">신혼부부</label>
 							</div>
 							<div class="field half">
-								<input type="checkbox" id="fragnant" name="fragnant">
+								<input type="checkbox" id="fragnant" name="fragnant" value="{{addq.ans3}}">
 								<label for="fragnant">임산부</label>
 							</div>
 							<div class="field half">
-								<input type="checkbox" id="oldman" name="oldman">
+								<input type="checkbox" id="oldman" name="oldman" value="{{addq.ans3}}">
 								<label for="oldman">중년</label>
 							</div>
 						</div>
@@ -113,25 +113,25 @@
 						<header>
 							<h2>월별 적금 금액을 알려주세요.</h2>
 						</header>
-						<div class="content">
+						<div class="content">{{survey.question}}
 							<div class="field half">
-								<input type="radio" id="50k" name="money-limit">
+								<input type="radio" id="50k" name="money-limit" value="{{addq.ans4}}">
 								<label for="50k">5만원 이하</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="100k" name="money-limit">
+								<input type="radio" id="100k" name="money-limit" value="{{addq.ans4}}">
 								<label for="100k">10만원 이하</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="200k" name="money-limit">
+								<input type="radio" id="200k" name="money-limit" value="{{addq.ans4}}">
 								<label for="200k">20만원 이하</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="300k" name="money-limit">
+								<input type="radio" id="300k" name="money-limit" value="{{addq.ans4}}">
 								<label for="300k">30만원 이하</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="300k-upper" name="money-limit">
+								<input type="radio" id="300k-upper" name="money-limit" value="{{addq.ans4}}">
 								<label for="300k-upper">30만원 초과</label>
 							</div>
 						</div>
@@ -142,25 +142,25 @@
 						<header>
 							<h2>저축 기간을 알려주세요.</h2>
 						</header>
-						<div class="content">
+						<div class="content">{{survey.question}}
 							<div class="field half">
-								<input type="radio" id="3mon" name="money-during">
+								<input type="radio" id="3mon" name="money-during" value="{{addq.ans5}}">
 								<label for="3mon">3개월 미만</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="3to6mon" name="money-during">
+								<input type="radio" id="3to6mon" name="money-during" value="{{addq.ans5}}">
 								<label for="3to6mon">3개월 ~ 6개월</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="6to12mon" name="money-during">
+								<input type="radio" id="6to12mon" name="money-during" value="{{addq.ans5}}">
 								<label for="6to12mon">6개월 ~ 12개월</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="12to24mon" name="money-during">
+								<input type="radio" id="12to24mon" name="money-during" value="{{addq.ans5}}">
 								<label for="12to24mon">12개월 ~ 24개월</label>
 							</div>
 							<div class="field half">
-								<input type="radio" id="24mon-upper" name="money-during">
+								<input type="radio" id="24mon-upper" name="money-during" value="{{addq.ans5}}">
 								<label for="24mon-upper">24개월 이상</label>
 							</div>
 						</div>
@@ -443,9 +443,10 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 						<header>
 							<h2>적금 추천 받기</h2>
 						</header>
+						<p><input type="hidden" name="survey_idx" value="{{survey.survey_idx}}" ></p>
 						<div class="content">
 							<ul class="actions">
-									<li><input type="submit" value="제출하기" class="button primary large" /></li>
+									<li><input type="submit" value="제출하기" class="button primary large" onclick="show_result()"/></li>
 								</ul>
 							<!--
 							<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
@@ -492,12 +493,16 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									</ul>
 								</li>
 							</ul>
-						</footer>
-					</section>
-				-->
-				<!-- Copyright -->
-					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
 
+						</footer>
+						-->
+						</div>
+					</section>
+
+				<!-- Copyright -->
+
+					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+				</form>
 			</div>
 
 		<!-- Scripts -->
@@ -507,6 +512,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 			<script src="static/js/breakpoints.min.js"></script>
 			<script src="static/js/util.js"></script>
 			<script src="static/js/main.js"></script>
+
 
 	</body>
 </html>

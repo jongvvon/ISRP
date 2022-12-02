@@ -1,11 +1,14 @@
 from django.urls import path, include
 from . import views
 
-urlpatterns = [
-    # ex: /
-    path('', views.index, name='index'),
-    # ex: /5/
-    path('<int:question_id>/', views.detail, name='detail'),
-    # ex: /5/comment/
-    path('<int:question_id>/comment/', views.comment, name='comment'),
+urlpatterns=[
+    path('', views.home),
+    path('save_survey', views.save_survey),
+    path('show_result', views.show_result),
+    path('list', views.list),
+    path('write', views.write),
+    path('insert', views.insert),
+    path('detail', views.detail),
+    path('update', views.update),
+    path('delete', views.delete),
 ]
